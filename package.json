@@ -4,10 +4,10 @@
   "scripts": {
     "dev": "fkill :9009 :3003 -f -s && concurrently \"npm:backend\" \"npm:frontend\"",
     "test": "jest --watchAll --verbose",
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "webpack --mode production",
     "frontend": "webpack serve --open",
     "backend": "node backend/server.js",
-    "start": "npm run backend"
+    "start": "webpack serve --mode development"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",

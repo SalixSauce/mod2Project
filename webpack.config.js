@@ -31,9 +31,9 @@ const config = {
   entry: INDEX_JS_PATH,
   mode: ENV,
   output: {
-    filename: JS_NAME,
-    publicPath: PUBLIC_PATH,
-    path: path.resolve(__dirname, DIST_PATH),
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   devtool: SOURCE_MAP,
   plugins: [
