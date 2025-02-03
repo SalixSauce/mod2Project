@@ -2,7 +2,7 @@
   "name": "client-side-auth",
   "version": "0.0.1",
   "scripts": {
-    "dev": "fkill :9009 :3003 -f -s && concurrently \"npm:backend\" \"npm:frontend\"",
+    "dev": "webpack serve --open",
     "test": "jest --watchAll --verbose",
     "build": "webpack --mode production",
     "frontend": "webpack serve --open",
