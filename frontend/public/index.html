@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Stars App</title>
+  
+  <!-- Optional: Add meta description for SEO -->
+  <meta name="description" content="Bloom Institute of Technology Stars App">
 </head>
-
 <body>
   <header>
     <h1>Stars App</h1>
   </header>
 
-  <div id="root"></div>
+  <main id="root"></main>
 
   <script>
-    const footer = document.createElement('footer')
-    const copyright = document.createElement('p')
-    const version = document.createElement('a')
-    footer.appendChild(copyright)
-    footer.appendChild(version)
-    document.body.insertAdjacentElement('beforeend', footer)
-    copyright.textContent = `© Bloom Institute of Technology ${new Date().getFullYear()}`
-    version.href = 'https://www.npmjs.com/package/@bloomtools/react'
-    version.target = '_blank'
-    version.textContent = "created with @bloomtools/react@0.1.37"
+    document.addEventListener('DOMContentLoaded', () => {
+      const footer = document.createElement('footer');
+      const copyright = document.createElement('p');
+      const version = document.createElement('a');
+      
+      footer.classList.add('app-footer');
+      copyright.classList.add('copyright');
+      version.classList.add('version-link');
+
+      footer.appendChild(copyright);
+      footer.appendChild(version);
+      document.body.insertAdjacentElement('beforeend', footer);
+      
+      copyright.textContent = `© Bloom Institute of Technology ${new Date().getFullYear()}`;
+      version.href = 'https://www.npmjs.com/package/@bloomtools/react';
+      version.target = '_blank';
+      version.rel = 'noopener noreferrer'; // Security best practice
+      version.textContent = "created with @bloomtools/react@0.1.37";
+    });
   </script>
 </body>
-
 </html>
